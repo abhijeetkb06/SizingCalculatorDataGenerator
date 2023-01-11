@@ -14,10 +14,10 @@ import java.util.List;
 //@author -Abhijeet
 public class SizingCalcJSONGenerator {
 
-    public static void generateSizingCalcJSON() throws JsonProcessingException {
+    public static Root generateDefaultSizingCalcJSON() throws JsonProcessingException {
         // Creating the ObjectMapper object
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
 
         //Create sizing calculator object
         Root root = getRoot();
@@ -60,8 +60,10 @@ public class SizingCalcJSONGenerator {
         root.setClusters(myClusters);
 
         // Converting the Object to JSONString
-        String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(root);
-        System.out.println(jsonString);
+//        String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(root);
+//        System.out.println(jsonString);
+
+        return root;
     }
 
     private static Hardware getHardware() {
