@@ -19,8 +19,11 @@ public class LaunchApplication extends JFrame
         this.setLayout(new FlowLayout());
         try {
            /* UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");*/
+            /*UIManager.setLookAndFeel(
+                    UIManager.getCrossPlatformLookAndFeelClassName());*/
+
             UIManager.setLookAndFeel(
-                    UIManager.getCrossPlatformLookAndFeelClassName());
+                    UIManager.getSystemLookAndFeelClassName());
         }
         catch (ClassNotFoundException e) {
 
@@ -49,8 +52,8 @@ public class LaunchApplication extends JFrame
         this.setDefaultCloseOperation(3);
 //        this.setSize(520, 150);
 
-        this.setSize(600, 200);
-//        this.setSize(650, 225);
+//        this.setSize(600, 200);
+        this.setSize(650, 180);
         this.setLocationRelativeTo(null);
     }
     

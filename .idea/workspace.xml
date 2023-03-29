@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="081ee6dc-7402-4862-9d4f-46136139a168" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/input/output/FileLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/input/output/FileTypeFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ui/input/output/LaunchApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lumberjackjson/processor/LumberjackJSONProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lumberjackjson/processor/LumberjackJSONProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ui/input/output/LaunchApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ui/input/output/LaunchApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +95,7 @@
       <workItem from="1680055443298" duration="1595000" />
       <workItem from="1680057156998" duration="5433000" />
       <workItem from="1680065074046" duration="2373000" />
-      <workItem from="1680067586124" duration="247000" />
+      <workItem from="1680067586124" duration="436000" />
     </task>
     <servers />
   </component>
