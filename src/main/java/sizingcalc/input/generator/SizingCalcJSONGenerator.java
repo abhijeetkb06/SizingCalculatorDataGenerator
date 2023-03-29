@@ -34,8 +34,16 @@ public class SizingCalcJSONGenerator {
         List<Cluster> myClusters = new ArrayList<>();
         Cluster cluster = new Cluster();
         cluster.setId("b21b271b-0643-4ca1-92bc-da73c7dd65dc");
-        cluster.setName("Sample_Cluster");
+        cluster.setName("Generated_Cluster");
         cluster.setCouchbase_version("7.1");
+        cluster.setCapella_credits("1.69");
+        cluster.setCapella_plan("Basic");
+        cluster.setCloud_provider("aws");
+        cluster.setCloud_region("us-east-1");
+        cluster.setCloud_service("EC2");
+        cluster.setInfrastructure("AWS");
+        cluster.setOperating_system("Linux");
+        cluster.setType("Capella");
 
         // Set Services
         cluster.setServices(services);
@@ -68,12 +76,12 @@ public class SizingCalcJSONGenerator {
 
     private static Hardware getHardware() {
         Hardware hardware = new Hardware();
-        hardware.setInstance("Custom");
-        hardware.setCpu(4);
-        hardware.setRam(32);
-        hardware.setDisk_type("EBS");
+        hardware.setInstance("c5.2xlarge");
+        hardware.setCpu(8);
+        hardware.setRam(16);
+        hardware.setDisk_type("gp3");
         hardware.setDisk_space(100);
-        hardware.setDisk_io(10000);
+        hardware.setDisk_io(3000);
         hardware.setNetwork(5);
         return hardware;
     }

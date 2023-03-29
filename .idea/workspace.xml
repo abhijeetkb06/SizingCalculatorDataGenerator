@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="081ee6dc-7402-4862-9d4f-46136139a168" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lumberjack/output/pojo/DataItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lumberjack/output/pojo/DataItem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lumberjackjson/processor/LumberjackJSONProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lumberjackjson/processor/LumberjackJSONProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sizing/calculator/pojo/Cluster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sizing/calculator/pojo/Cluster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sizingcalc/input/generator/SizingCalcJSONGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sizingcalc/input/generator/SizingCalcJSONGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +80,8 @@
       <workItem from="1670265341610" duration="3754000" />
       <workItem from="1670269286270" duration="11677000" />
       <workItem from="1672155126113" duration="353000" />
+      <workItem from="1680055443298" duration="1595000" />
+      <workItem from="1680057156998" duration="4506000" />
     </task>
     <servers />
   </component>
@@ -101,7 +104,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/lumberjackjson/processor/LumberjackJSONProcessor.java</url>
-          <line>24</line>
+          <line>28</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>

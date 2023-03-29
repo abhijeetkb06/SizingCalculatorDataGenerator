@@ -14,7 +14,7 @@ public class DataItem {
     private long vbReplicaItmMemory;
 
     @JsonProperty("avg_value_size")
-    private Object avgValueSize;
+    private Double avgValueSize;
 
     @JsonProperty("ep_replica_datatype_snappy,json")
     private long epReplicaDatatypeSnappyJson;
@@ -41,13 +41,13 @@ public class DataItem {
     private long vbReplicaMetaDataMemory;
 
     @JsonProperty("ep_mem_low_wat_percent")
-    private Object epMemLowWatPercent;
+    private Double epMemLowWatPercent;
 
     @JsonProperty("avg_cmd_set")
-    private Object avgCmdSet;
+    private Integer avgCmdSet;
 
     @JsonProperty("avg_key_size")
-    private Object avgKeySize;
+    private Double avgKeySize;
 
     @JsonProperty("ep_active_datatype_json")
     private long epActiveDatatypeJson;
@@ -59,13 +59,13 @@ public class DataItem {
     private long getMisses;
 
     @JsonProperty("avg_cmd_get")
-    private Object avgCmdGet;
+    private Integer avgCmdGet;
 
     @JsonProperty("vb_active_perc_mem_resident")
     private long vbActivePercMemResident;
 
     @JsonProperty("memory_utilization_percent")
-    private Object memoryUtilizationPercent;
+    private Double memoryUtilizationPercent;
 
     @JsonProperty("resident_ratio")
     private long residentRatio;
@@ -146,7 +146,7 @@ public class DataItem {
     private long epActiveDatatypeRaw;
 
     @JsonProperty("ep_mem_high_wat_percent")
-    private Object epMemHighWatPercent;
+    private Double epMemHighWatPercent;
 
     @JsonProperty("ep_replica_datatype_json")
     private long epReplicaDatatypeJson;
@@ -196,11 +196,11 @@ public class DataItem {
         this.vbReplicaItmMemory = vbReplicaItmMemory;
     }
 
-    public Object getAvgValueSize() {
+    public Double getAvgValueSize() {
         return avgValueSize;
     }
 
-    public void setAvgValueSize(Object avgValueSize) {
+    public void setAvgValueSize(Double avgValueSize) {
         this.avgValueSize = avgValueSize;
     }
 
@@ -272,7 +272,7 @@ public class DataItem {
         return epMemLowWatPercent;
     }
 
-    public void setEpMemLowWatPercent(Object epMemLowWatPercent) {
+    public void setEpMemLowWatPercent(Double epMemLowWatPercent) {
         this.epMemLowWatPercent = epMemLowWatPercent;
     }
 
@@ -280,15 +280,15 @@ public class DataItem {
         return avgCmdSet;
     }
 
-    public void setAvgCmdSet(Object avgCmdSet) {
+    public void setAvgCmdSet(Integer avgCmdSet) {
         this.avgCmdSet = avgCmdSet;
     }
 
-    public Object getAvgKeySize() {
+    public Double getAvgKeySize() {
         return avgKeySize;
     }
 
-    public void setAvgKeySize(Object avgKeySize) {
+    public void setAvgKeySize(Double avgKeySize) {
         this.avgKeySize = avgKeySize;
     }
 
@@ -320,7 +320,7 @@ public class DataItem {
         return avgCmdGet;
     }
 
-    public void setAvgCmdGet(Object avgCmdGet) {
+    public void setAvgCmdGet(Integer avgCmdGet) {
         this.avgCmdGet = avgCmdGet;
     }
 
@@ -336,7 +336,7 @@ public class DataItem {
         return memoryUtilizationPercent;
     }
 
-    public void setMemoryUtilizationPercent(Object memoryUtilizationPercent) {
+    public void setMemoryUtilizationPercent(Double memoryUtilizationPercent) {
         this.memoryUtilizationPercent = memoryUtilizationPercent;
     }
 
@@ -552,7 +552,7 @@ public class DataItem {
         return epMemHighWatPercent;
     }
 
-    public void setEpMemHighWatPercent(Object epMemHighWatPercent) {
+    public void setEpMemHighWatPercent(Double epMemHighWatPercent) {
         this.epMemHighWatPercent = epMemHighWatPercent;
     }
 

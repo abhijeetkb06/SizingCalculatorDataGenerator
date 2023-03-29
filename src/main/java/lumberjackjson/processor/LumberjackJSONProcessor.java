@@ -3,6 +3,7 @@ package lumberjackjson.processor;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lumberjack.output.pojo.DataItem;
 import lumberjack.output.pojo.Response;
@@ -10,6 +11,7 @@ import sizing.calculator.pojo.*;
 import sizingcalc.input.generator.SizingCalcJSONGenerator;
 
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +22,8 @@ public class LumberjackJSONProcessor {
         // Creating the ObjectMapper object
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+//        mapper.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
         String home = System.getProperty("user.home");
         File json = new File(home+"/Downloads/" + "lumberjackoutput.json");
         Response response = mapper.readValue(json, Response.class);
@@ -55,6 +59,17 @@ public class LumberjackJSONProcessor {
                 sizingCalcJSONRoot.getClusters().get(0).getServices().getData().setBuckets(buckets);
             }
         }
+
+        // Generate JSON file
+        // Creating the ObjectMapper object for Sizing calc
+        ObjectMapper mapperSizingCalc = new ObjectMapper();
+        mapperSizingCalc.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
+        // Converting the Object to JSONString
+        String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sizingCalcJSONRoot);
+        System.out.println(jsonString);
+        FileWriter file = new FileWriter(home+"/Downloads/" + "GeneratedSizingCalcPrePopulator.json");
+        file.write(jsonString);
+        file.close();
     }
 
     private static Bucket getData(DataItem dataItem, int bucket_id) {
@@ -85,8 +100,8 @@ public class LumberjackJSONProcessor {
         collection.setName("_default");
         collection.setTotal_documents_keys((int)dataItem.getCurrItems());
         collection.setWorking_set(0.10);
-        collection.setAvg_key_id_size((int)dataItem.getAvgKeySize());
-        collection.setAvg_document_size((int)dataItem.getAvgValueSize());
+        collection.setAvg_key_id_size((int)dataItem.getAvgKeySize().doubleValue());
+        collection.setAvg_document_size((int)dataItem.getAvgValueSize().doubleValue());
         collection.setRead_ops_per_sec((int)dataItem.getAvgCmdGet());
         collection.setWrite_ops_per_sec((int)dataItem.getAvgCmdSet());
         collection.setDelete_ops_per_sec((int)dataItem.getAvgDeleteHits());
