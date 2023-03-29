@@ -18,14 +18,15 @@ import java.util.List;
 
 public class LumberjackJSONProcessor {
 
-    public static void processLumberjackJSON() throws IOException {
+    public static void processLumberjackJSON(final String lumberJackFile, final String sizingCalcFile) throws IOException {
         // Creating the ObjectMapper object
         ObjectMapper mapper = new ObjectMapper();
         mapper.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         mapper.disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 //        mapper.setVisibility(VisibilityChecker.Std.defaultInstance().withFieldVisibility(JsonAutoDetect.Visibility.ANY));
         String home = System.getProperty("user.home");
-        File json = new File(home+"/Downloads/" + "lumberjackoutput.json");
+//        File json = new File(home+"/Downloads/" + "lumberjackoutput.json");
+        File json = new File(lumberJackFile);
         Response response = mapper.readValue(json, Response.class);
         System.out.println("Response = " + response);
 
@@ -67,7 +68,8 @@ public class LumberjackJSONProcessor {
         // Converting the Object to JSONString
         String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(sizingCalcJSONRoot);
         System.out.println(jsonString);
-        FileWriter file = new FileWriter(home+"/Downloads/" + "GeneratedSizingCalcPrePopulator.json");
+//        FileWriter file = new FileWriter(home+"/Downloads/" + "GeneratedSizingCalcPrePopulator.json");
+        FileWriter file = new FileWriter(sizingCalcFile);
         file.write(jsonString);
         file.close();
     }
